@@ -5,10 +5,10 @@
 module.exports = async ({ getNamedAccounts, deployments }) => {
   const { deploy } = deployments;
   const { deployer } = await getNamedAccounts();
-  await deploy("UndergroundNFT", {
+  await deploy("TheUnderground", {
     // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
     from: deployer,
-    args: [ "UndergroundNFT", "SGB", "https://ipfs.io/ipfs/QmRUgtNAWCz1NypSyBncuoFHQHu7fPFN8DAPTcZgh5E4G4/" ],
+    args: [ "The-Underground", "UNDRGD", "https://ipfs.io/ipfs/QmRUgtNAWCz1NypSyBncuoFHQHu7fPFN8DAPTcZgh5E4G4/" ],
     log: true,
   });
 
@@ -48,4 +48,4 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   });
   */
 };
-module.exports.tags = ["UndergroundNFT"];
+module.exports.tags = ["TheUnderground"];

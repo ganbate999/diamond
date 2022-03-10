@@ -446,7 +446,7 @@ function App(props) {
     );
   }
 
-  const objTokenCount = useContractReader(readContracts, "UndergroundNFT", "getRemainCollections");
+  const objTokenCount = useContractReader(readContracts, "TheUnderground", "getRemainCollections");
   const [remainTokenCount, setTokenCount] = useState(0)
 
   useEffect(() => {
@@ -461,7 +461,7 @@ function App(props) {
   // get remain mint nfts for this user
   const objCanMintCount = useContractReader(
     readContracts,
-    "UndergroundNFT",
+    "TheUnderground",
     "getRemainNFTforUser"
   );
   const [remainMintCount, setMintCount] = useState(0);
@@ -502,7 +502,7 @@ function App(props) {
                 loadWeb3Modal={loadWeb3Modal}
                 logoutOfWeb3Modal={logoutOfWeb3Modal}
                 blockExplorer={blockExplorer}
-                contract={readContracts["UndergroundNFT"]}
+                contract={readContracts["TheUnderground"]}
                 signer={userSigner}
                 remainTokenCount={remainTokenCount} 
                 remainMintCount={remainMintCount}

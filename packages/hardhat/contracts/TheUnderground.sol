@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract UndergroundNFT is ERC721Enumerable, Ownable {
+contract TheUnderground is ERC721Enumerable, Ownable {
 
     using Strings for uint256;
     
@@ -74,8 +74,6 @@ contract UndergroundNFT is ERC721Enumerable, Ownable {
 
         for (uint256 i = 1; i <= _mintAmount; i++) {
             _safeMint(_to, supply + i);
-            // ERC1155 mint function
-            // _mint(msg.sender, maxSupply - remainTokenAmount, 1, "");
             addressMintedBalance[msg.sender]++;
             remainTokenAmount--;
         }

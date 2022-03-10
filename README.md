@@ -1,4 +1,4 @@
-# 🏗 UndergroundNFT-ETH
+# 🏗 TheUnderground-ETH
 
 > everything you need to build on Ethereum! 🚀
 
@@ -33,7 +33,7 @@ yarn deploy
 yarn etherscan-verify --network rinkeby
 ```
 
-🔏 Edit your smart contract `UndergroundNFT.sol` in `./contracts`
+🔏 Edit your smart contract `TheUnderground.sol` in `./contracts`
 
 💼 Edit your deployment scripts in `./deploy`
 

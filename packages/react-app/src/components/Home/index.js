@@ -94,7 +94,7 @@ export const Home = ({
             />
           </ButtonWrapper>
           <ButtonOpensea>
-            <a href="https://opensea.io/collection/UndergroundNFT-v2" className="opensea"> 
+            <a href="https://opensea.io/collection/TheUnderground-v2" className="opensea"> 
               See in Opensea
             </a>
           </ButtonOpensea>

@@ -4,7 +4,7 @@
       "name": "mainnet",
       "chainId": "1",
       "contracts": {
-        "UndergroundNFT": {
+        "TheUnderground": {
           "address": "0xf663BB37Cc677DEF0C85bf27d2be325285e00846",
           "abi": [
             {
