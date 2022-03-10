@@ -23,10 +23,8 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
       plus it will use *.args for constructor args
 */
 
-//0xb6f0e49d966b7d7d5972af9009fd77e0e58261d2
-// Select the network you want to deploy to here:
 //
-const defaultNetwork = "mainnet";
+const defaultNetwork = "rinkeby";
 
 const mainnetGwei = 90;
 

@@ -15,7 +15,7 @@ contract TheUnderground is ERC721Enumerable, Ownable {
     string public baseURI;
     string public baseExtension     = ".json";
     string public metaDataFolder    = "";
-    string public notRevealedUri    = "https://ipfs.io/ipfs/QmbBGF4sQXDPtXLWVbm4aMq7J6HryPoCBD8wzUv5wNV8E1/1.json";
+    string public notRevealedUri    = "https://theunderground.mypinata.cloud/ipfs/QmY8YFLk9urHtpjiYXrVvmRUrPCjR4rkYDcABZzZrDJ1Gg/1.json";
     string public _name;
     string public _symbol;
     string public _initBaseURI;
