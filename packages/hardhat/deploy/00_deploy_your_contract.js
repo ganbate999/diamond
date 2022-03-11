@@ -8,7 +8,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   await deploy("TheUnderground", {
     // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
     from: deployer,
-    args: [ "The-Underground", "UNDRGD", "https://ipfs.io/ipfs/QmRUgtNAWCz1NypSyBncuoFHQHu7fPFN8DAPTcZgh5E4G4/" ],
+    args: [ "The Underground", "UNDRGD", "https://theunderground.mypinata.cloud/ipfs/QmPpF7hVDqcn4XxKWWGY53xS8fnNL48JdNnmVMHdn7T3gF/" ],
     log: true,
   });
 
