@@ -3,12 +3,14 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import theme from './theme.json'
 import ReactDOM from "react-dom";
 import App from "./App";
+import GlobalStyle from './GlobalStyle';
 
 const subgraphUri = "http://localhost:8000/subgraphs/name/scaffold-eth/your-contract";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-      <App subgraphUri={subgraphUri} />
+    <GlobalStyle />
+    <App subgraphUri={subgraphUri} />
   </ThemeProvider>,
   document.getElementById("root"),
 );

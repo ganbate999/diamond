@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { parseEther } from "@ethersproject/units";
 import { ETH_VAL } from "../../constants";
 import { Account } from "../../components";
+import phone from '../../assets/img/BLACK1.gif'
 
 import {
   Container,
@@ -12,7 +13,7 @@ import {
   ButtonWrapper,
   ButtonOpensea,
   ImgWrapper,
-  PointWrapper,
+  GifWrapper,
 } from "./styles"; //k-k
 
 export const Home = ({
@@ -42,7 +43,7 @@ export const Home = ({
   };
 
   const _increaseMintCount = () => {
-    if(remainMintCount < 1) {
+    if (remainMintCount < 1) {
       setMintCount(1);
       return
     }
@@ -57,8 +58,8 @@ export const Home = ({
     <Container>
       <InnerContainer>
         <TextWrapper>
-          <h1>GOLD BAR</h1>
-          <h2>{2112 - remainTokenCount}/2112</h2>
+          <h1>The Underground</h1>
+          <h2>{2500 - remainTokenCount}/2500</h2>
           <NFTContainer>
             {/* <p>NFT Count {cnt > 0 && <span>{cnt}</span>}</p> */}
             {/* <ProgressBarContainer>
@@ -94,14 +95,15 @@ export const Home = ({
             />
           </ButtonWrapper>
           <ButtonOpensea>
-            <a href="https://opensea.io/collection/TheUnderground-v2" className="opensea"> 
+            <a href="https://opensea.io/collection/TheUnderground-v2" className="opensea">
               See in Opensea
             </a>
           </ButtonOpensea>
         </TextWrapper>
         <ImgWrapper>
-          <img className="banner_img" src="/112.png" alt="" />
-          <img className="hero_img" src="/home-hero2.png" alt="" />
+          <GifWrapper>
+            <img className="hero_img" src={phone} alt="" />
+          </GifWrapper>
         </ImgWrapper>
       </InnerContainer>
     </Container>
