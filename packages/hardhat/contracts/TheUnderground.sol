@@ -15,7 +15,7 @@ contract TheUnderground is ERC721Enumerable, Ownable {
     string public baseURI;
     string public baseExtension     = ".json";
     string public metaDataFolder    = "";
-    string public notRevealedUri    = "https://ipfs.io/ipfs/QmbBGF4sQXDPtXLWVbm4aMq7J6HryPoCBD8wzUv5wNV8E1/1.json";
+    string public notRevealedUri    = "https://theunderground.mypinata.cloud/ipfs/Qmcz6qSh6B9mDR16o1RqdBoUjqu14xicKBt52Tbg8ViYhP/1.json";
     string public _name;
     string public _symbol;
     string public _initBaseURI;
@@ -129,11 +129,7 @@ contract TheUnderground is ERC721Enumerable, Ownable {
         require(_mintState <= 2, "Input Wrong mint state " );
         mintState = _mintState;
         if(mintState == 1){
-            setNftPerAddressLimit(7);
-            setmaxMintAmount(7);
         }else if(mintState == 2){
-            setNftPerAddressLimit(100);
-            setmaxMintAmount(100);
             setOnlyWhitelisted(0);
         }
     }

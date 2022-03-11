@@ -1,11 +1,11 @@
 {
-  "1": {
-    "mainnet": {
-      "name": "mainnet",
-      "chainId": "1",
+  "4": {
+    "rinkeby": {
+      "name": "rinkeby",
+      "chainId": "4",
       "contracts": {
         "TheUnderground": {
-          "address": "0xf663BB37Cc677DEF0C85bf27d2be325285e00846",
+          "address": "0x6Dfcf6CE428b401cE0e7c78183038B8Aa13f9138",
           "abi": [
             {
               "inputs": [
