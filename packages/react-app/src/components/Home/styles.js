@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 30px 20px;
-  color: #E7B83D;
+  color: white;
   min-height: 100vh;
   overflow: hidden;
 
@@ -21,13 +21,12 @@ export const Container = styled.div`
 `;
 
 export const InnerContainer = styled.div`
-  position: absolute;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1000px) {
     margin: auto;
     flex-direction: row;
     width: 90%;
@@ -42,7 +41,7 @@ export const InnerContainer = styled.div`
 
 export const TextWrapper = styled.div`
   margin: auto;
-  width: 100%;
+  width: 50%;
 
   @font-face {
     font-family: LuloClean;
@@ -54,8 +53,7 @@ export const TextWrapper = styled.div`
     justify-content: center;
     font-weight: bold;
     font-size: 36px;
-    color: #E7B83D;
-    font-family: LuloClean;
+    color: #fff;
 
     @media (max-width: 768px) {
       font-size: 50px !important;
@@ -68,7 +66,12 @@ export const TextWrapper = styled.div`
     font-size: 28px;
     font-style: italic;
     font-weight: bold;
-    color: #E7B83D;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 1200px){
+    width: 100%;
+    padding: 20% 20px;
   }
 
   @media (min-width: 768px) {
@@ -127,7 +130,7 @@ export const NFTContainer = styled.div`
   }
 
   button {
-    background: #E7B83D;
+    background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     border: none;
@@ -140,17 +143,17 @@ export const NFTContainer = styled.div`
     height: 50px;
 
     &:hover {
-      background-color: #E7B83D;
-      box-shadow: 0 0 10px #E7B83D;
+      background-color: #fff;
+      box-shadow: 0 0 10px #fff;
       color: black;
     }
   }
 
   .mint_count {
     background-color: transparent;
-    border: 3px solid #E7B83D;
+    border: 3px solid #fff;
     border-radius: 12px;
-    color: #E7B83D;
+    color: #fff;
     padding: 5px 50px;
     font-size: 35px;
     font-weight: bold;
@@ -185,7 +188,7 @@ export const ButtonWrapper = styled.div`
   padding-top: 50px;
 
   button {
-    background: #E7B83D;
+    background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     border: none;
@@ -197,14 +200,14 @@ export const ButtonWrapper = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #E7B83D;
-      box-shadow: 0 0 10px #E7B83D;
+      background-color: #fff;
+      box-shadow: 0 0 10px #fff;
       color: black;
     }
   }
 
   .back {
-    background: #E7B83D;
+    background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     border: none;
@@ -216,20 +219,20 @@ export const ButtonWrapper = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #E7B83D;
-      box-shadow: 0 0 10px #E7B83D;
+      background-color: #fff;
+      box-shadow: 0 0 10px #fff;
       color: black;
     }
 
     &:focus,
     &:active {
       text-decoration: none;
-      background: #E7B83D !important;
+      background: #fff !important;
     }
 
     &.ant-btn:focus {
       color: black !important;
-      background: #E7B83D !important;
+      background: #fff !important;
       border: none !important;
     }
   }
@@ -244,7 +247,7 @@ export const ButtonOpensea = styled.div`
   padding-top: 20px;
     
   button {
-    background: #E7B83D;
+    background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     border: none;
@@ -256,14 +259,14 @@ export const ButtonOpensea = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #E7B83D;
-      box-shadow: 0 0 10px #E7B83D;
+      background-color: #fff;
+      box-shadow: 0 0 10px #fff;
       color: black;
     }
   }
 
   .opensea {
-    background: #E7B83D;
+    background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     border: none;
@@ -277,20 +280,20 @@ export const ButtonOpensea = styled.div`
     text-align: center;
 
     &:hover {
-      background-color: #E7B83D;
-      box-shadow: 0 0 10px #E7B83D;
+      background-color: #fff;
+      box-shadow: 0 0 10px #fff;
       color: black;
     }
 
     &:focus,
     &:active {
       text-decoration: none;
-      background: #E7B83D !important;
+      background: #fff !important;
     }
 
     &.ant-btn:focus {
       color: black !important;
-      background: #E7B83D !important;
+      background: #fff !important;
       border: none !important;
     }
   }
@@ -301,66 +304,23 @@ export const ImgWrapper = styled.div`
   display: flex;
   align-items: center;
   width: 50%;
-
-  .banner_img {
-    position: absolute;
-    left: -77px;
-    top: 36px;
-    width: 15%;
-    z-index: -1;
-
-    @media (max-width: 1440px) {
-      left: 0px;
-      top: 36px;
-      width: 15%;
-    }
-    @media (max-width: 1368px) {
-      left: 0px;
-      top: 36px;
-      width: 20%;
-    }
-    @media (max-width: 1024px) {
-      left: 39px;
-      top: 36px;
-      width: 25%;
-    }
-
-    @media (max-width: 768px) {
-      left: 39px;
-      top: 36px;
-      width: 30%;
-    }
-
-    @media (max-width: 500px) {
-      left: 39px;
-      top: 36px;
-      width: 40%;
-    }
-  }
-
-  .hero_img {
-    @media (max-width: 600px) {
-      position: absolute;
-      z-index: -2;
-    }
-
-    @media (max-width: 768px) {
-      position: absolute;
-      z-index: -2;
-    }
-
-    @media (max-width: 1024px) {
-      margin-left: 90px;
-    }
-
-    @media (max-width: 1200px) {
-      margin-left: 30px;
-    }
-
-    @media (max-width: 1440px) {
-    }
+  @media screen and (max-width: 1200px){
+    width: 100%;
   }
 `;
+
+export const GifWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  
+  .hero_img {
+    align-items: center;
+    width: 70%;
+    border-radius: 40px;
+  }
+`;
+
 
 export const ProgressBarContainer = styled.ul`
   padding: 0px;

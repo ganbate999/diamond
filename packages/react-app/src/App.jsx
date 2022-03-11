@@ -29,8 +29,13 @@ import { useOnlineStatus } from './hooks/useOnlineStatus'    //k-k
 import Portis from "@portis/web3";
 import Fortmatic from "fortmatic";
 import Authereum from "authereum";
-
-
+import Navigation from "./components/Navigation";
+import Aboutus from "./components/Home/Aboutus";
+import Roadmap from "./components/Home/Roadmap";
+import FAQSection from "./components/Home/FAQSection";
+import Team from "./components/Home/Team";
+import Footer from "./components/Footer";
+import ScrolledButton from "./components/ScrolledButton";
 
 
 const { ethers } = require("ethers");
@@ -71,8 +76,8 @@ const scaffoldEthProvider = navigator.onLine
   : null;
 const poktMainnetProvider = navigator.onLine
   ? new ethers.providers.StaticJsonRpcProvider(
-      "https://eth-mainnet.gateway.pokt.network/v1/lb/611156b4a585a20035148406",
-    )
+    "https://eth-mainnet.gateway.pokt.network/v1/lb/611156b4a585a20035148406",
+  )
   : null;
 const mainnetInfura = navigator.onLine
   ? new ethers.providers.StaticJsonRpcProvider("https://mainnet.infura.io/v3/" + INFURA_ID)
@@ -170,8 +175,8 @@ function App(props) {
     poktMainnetProvider && poktMainnetProvider._isProvider
       ? poktMainnetProvider
       : scaffoldEthProvider && scaffoldEthProvider._network
-      ? scaffoldEthProvider
-      : mainnetInfura;
+        ? scaffoldEthProvider
+        : mainnetInfura;
 
   const [injectedProvider, setInjectedProvider] = useState();
   const [address, setAddress] = useState();
@@ -382,7 +387,7 @@ function App(props) {
       // </div>
     );
   }
-  
+
 
   const loadWeb3Modal = useCallback(async () => {
     const provider = await web3Modal.connect();
@@ -450,11 +455,11 @@ function App(props) {
   const [remainTokenCount, setTokenCount] = useState(0)
 
   useEffect(() => {
-    if(objTokenCount != undefined) {
+    if (objTokenCount != undefined) {
       setTokenCount(parseInt(objTokenCount["_hex"]))
     }
     if (DEBUG) console.log("~~~~~~~~~~~~~~~~~~~~~~~ " + objTokenCount + "@" + remainTokenCount);
-    
+
   }, [objTokenCount]);
 
 
@@ -475,7 +480,7 @@ function App(props) {
     );
   }, [objCanMintCount]);
 
-  
+
   // const param = [address]
   // const userHaveToken = useContractReader(readContracts, "AntiApe", "userHaveTokens", param);
   // useEffect(() => {
@@ -485,14 +490,14 @@ function App(props) {
   const onlineStatus = useOnlineStatus()
 
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       {onlineStatus && (     //k-k
         <div>
           <HelmetTags page='home' />
-          
           <Switch>
             <Route exact path='/'>
-              <Home 
+              <Navigation />
+              <Home
                 address={address}
                 localProvider={localProvider}
                 userSigner={userSigner}
@@ -504,15 +509,21 @@ function App(props) {
                 blockExplorer={blockExplorer}
                 contract={readContracts["TheUnderground"]}
                 signer={userSigner}
-                remainTokenCount={remainTokenCount} 
+                remainTokenCount={remainTokenCount}
                 remainMintCount={remainMintCount}
-                />
+              />
+              <Aboutus />
+              <Roadmap />
+              <FAQSection />
+              <Team />
+              <Footer />
+              <ScrolledButton />
             </Route>
           </Switch>
           {networkDisplay}
         </div>
       )}
-      </BrowserRouter>  
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,10 @@
 {
   "name": "@scaffold-eth/react-app",
   "version": "1.0.0",
+  "resolutions": {
+    "//": "See https://github.com/facebook/create-react-app/issues/11773",
+    "react-error-overlay": "6.0.9"
+  },
   "homepage": ".",
   "browserslist": {
     "production": [
@@ -45,17 +49,18 @@
     "postcss": "^8.2.6",
     "qrcode.react": "^1.0.0",
     "react": "^17.0.2",
-    "react-helmet": "^6.1.0",
     "react-blockies": "^1.4.1",
     "react-css-theme-switcher": "^0.2.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-qr-reader": "^2.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
-    "walletlink": "^2.1.5",
-    "web3modal": "^1.9.1",
+    "react-scroll": "^1.8.6",
     "styled-components": "^5.3.1",
-    "web-vitals": "^1.0.1"
+    "walletlink": "^2.1.5",
+    "web-vitals": "^1.0.1",
+    "web3modal": "^1.9.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.3.21",

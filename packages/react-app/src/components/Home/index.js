@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { parseEther } from "@ethersproject/units";
 import { ETH_VAL } from "../../constants";
 import { Account } from "../../components";
+import phone from '../../assets/img/BLACK1.gif'
 
 import {
   Container,
@@ -12,7 +13,7 @@ import {
   ButtonWrapper,
   ButtonOpensea,
   ImgWrapper,
-  PointWrapper,
+  GifWrapper,
 } from "./styles"; //k-k
 
 export const Home = ({
@@ -42,7 +43,7 @@ export const Home = ({
   };
 
   const _increaseMintCount = () => {
-    if(remainMintCount < 1) {
+    if (remainMintCount < 1) {
       setMintCount(1);
       return
     }
@@ -91,7 +92,7 @@ export const Home = ({
             />
           </ButtonWrapper>
           <ButtonOpensea>
-            <a href="https://opensea.io/collection/TheUnderground-v2" className="opensea"> 
+            <a href="https://opensea.io/collection/TheUnderground-v2" className="opensea">
               See in Opensea
             </a>
           </ButtonOpensea>
