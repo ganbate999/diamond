@@ -57,8 +57,8 @@ export const Home = ({
     <Container>
       <InnerContainer>
         <TextWrapper>
-          <h1>GOLD BAR</h1>
-          <h2>{2112 - remainTokenCount}/2112</h2>
+          <h1>Diamond</h1>
+          <h2>{10000 - remainTokenCount}/10000</h2>
           <NFTContainer>
             {/* <p>NFT Count {cnt > 0 && <span>{cnt}</span>}</p> */}
             {/* <ProgressBarContainer>
@@ -73,9 +73,6 @@ export const Home = ({
             </button>
           </NFTContainer>
           <ButtonWrapper>
-            <a href="https://www.shovelhub.net/" className="back">
-              Back
-            </a>
             <Account
               address={address}
               localProvider={localProvider}
@@ -99,10 +96,6 @@ export const Home = ({
             </a>
           </ButtonOpensea>
         </TextWrapper>
-        <ImgWrapper>
-          <img className="banner_img" src="/112.png" alt="" />
-          <img className="hero_img" src="/home-hero2.png" alt="" />
-        </ImgWrapper>
       </InnerContainer>
     </Container>
   );
